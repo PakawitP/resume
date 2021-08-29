@@ -49,8 +49,8 @@ export default function Sidebar(props) {
         </Grid>
       </Grid><Grid container direction="row" spacing={1} alignItems="center">
         {archives.map((archive) => (
-          <Grid item>
-            <Link display="block" variant="body1" href={archive.url} key={archive.title}>
+          <Grid item key={archive.title}>
+            <Link display="block" variant="body1" href={archive.url} >
               <img src={archive.icon} alt={archive.name} />
             </Link>
           </Grid>
@@ -68,7 +68,7 @@ export default function Sidebar(props) {
       </Grid>
       {
         social.map((network) => (
-          <Link display="block" variant="body1" href={network.url || "#"} key={network}>
+          <Link display="block" variant="body1" href={network.url || "#"} key={network.name}>
             <Grid container direction="row" spacing={1} alignItems="center">
               <Grid item>
                 <network.icon />

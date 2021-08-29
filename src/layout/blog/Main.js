@@ -32,11 +32,13 @@ export default function Main(props) {
       <Typography variant="h6" gutterBottom>
         {title}
       </Typography>
-      <Divider className={classes.marginDivider}/>
-      <Slide autoplay={true} duration={7000}>
+      <Divider className={classes.marginDivider} />
+      <Slide easing="ease" autoplay={true} duration={7000}>
         {posts.map((post) => (
-          <div className = {classes.alignimg}  key={post.id}>
-            <img className = {classes.img} src={post.img} alt={post.id}/>
+          <div className="each-slide" key={post.id}>
+            <div className={classes.alignimg}>
+              <img className={classes.img} src={post.img} alt={post.id} />
+            </div>
           </div>
         ))}
       </Slide>
