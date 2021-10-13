@@ -27,6 +27,9 @@ export default function MainRount() {
                 <Route path={"/pdfView:id"}>
                     <HisPdfView />
                 </Route>
+                <Route path={"/experience:id"}>
+                    <HisPdfView />
+                </Route>
             </Switch>
         </Router>
     );

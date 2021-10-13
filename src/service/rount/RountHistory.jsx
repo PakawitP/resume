@@ -8,7 +8,7 @@ import {
 
 import History from "../../page/History";
 import Workings from "../../page/Workings";
-import HisPdfView from "../../component/pageView/HisPdfView";
+// import HisPdfView from "../../component/pageView/HisPdfView";
 const RountHistory = () => {
  
     let { path, url } = useRouteMatch();

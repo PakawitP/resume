@@ -18,5 +18,8 @@ export const useStyles = makeStyles((theme) => ({
     },
     alignimg: {
         textAlign: "center",
+    },
+    marginsubh: {
+        marginTop: theme.spacing(7),
     }
 }));

@@ -8,6 +8,7 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Hidden from '@material-ui/core/Hidden';
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
   card: {
@@ -27,7 +28,7 @@ export default function FeaturedPost(props) {
 
   return (
     <Grid item xs={12} md={6}>
-      <CardActionArea component="a" href="#">
+      <Link to={'/experience/' + 'post.id'} component={CardActionArea}>
         <Card className={classes.card}>
           <div className={classes.cardDetails}>
             <CardContent>
@@ -49,7 +50,7 @@ export default function FeaturedPost(props) {
             <CardMedia className={classes.cardMedia} image={post.image} title={post.imageTitle} />
           </Hidden>
         </Card>
-      </CardActionArea>
+      </Link>
     </Grid>
   );
 }
